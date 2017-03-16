@@ -1,0 +1,24 @@
+Job for mysqld.service failed because a timeout was exceeded. See "systemctl status mysqld.service" and "journalctl -xe" for details.
+#fix
+修改了各种mysql文件的权限后 一切OK了
+
+
+安装:
+
+#先安装带有可用的mysql5系列社区版资源的rpm包
+rpm -Uvh http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm
+
+#查看当前可用的mysql安装资源：
+yum repolist enabled | grep "mysql.*-community.*"
+
+#直接使用yum的方式安装MySQL
+yum -y install mysql-community-server
+
+#加入开机启动
+systemctl enable mysqld
+
+#启动mysql服务进程
+systemctl start mysqld
+
+#重置密码
+mysql_secure_installation

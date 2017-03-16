@@ -1,0 +1,9 @@
+PHP
+php-fpm
+nginx
+redis
+mysql
+yaf
+rabbitMQ
+swoole
+autoconf
