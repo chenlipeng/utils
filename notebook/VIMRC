@@ -1,0 +1,11 @@
+"设置不同的颜色色调 默认是'light'  默认情况下 批注的字体是深蓝色 不容易看
+set bg=dark
+
+"设置行号
+set nu
+
+"设置自动缩排
+set autoindent
+
+"设置Tab键的缩进值tabStop
+set ts=4
