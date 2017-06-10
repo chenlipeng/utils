@@ -1,0 +1,17 @@
+#Php-fpm
+master进程可以理解以下信号
+
+INT, TERM 立刻终止
+QUIT 平滑终止
+USR1 重新打开日志文件
+USR2 平滑重载所有worker进程并重新载入配置和二进制模块
+
+#kill Php-fpm进程
+sudo kill -INT `cat /usr/local/var/run/php-fpm.pid`
+
+#conf
+/usr/local/etc/php-fpm.conf
+
+#error-log
+/tmp/log/php-fpm.log
+

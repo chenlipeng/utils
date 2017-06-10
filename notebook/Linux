@@ -1,0 +1,62 @@
+#设置Ecs支持密钥对登录
+.ssh/authorized_keys
+
+#是否允许密码登陆
+PasswordAuthentication yes
+service sshd restart
+
+
+#添加开机启动项
+/usr/lib/systemd/system
+
+001: 添加启动文件配置
+	/usr/lib/systemd/system
+002: 设置为开机启动
+	sudo systemctl enable redis
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=================================================================================================================================
+redis.service
+=================================================================================================================================
+[Unit]
+Description=Redis persistent key-value database
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/redis-server
+; ExecStop=/usr/bin/redis-shutdown
+; User=redis
+; Group=redis
+
+[Install]
+WantedBy=multi-user.target
+
+
+=================================================================================================================================
+supervisord.service
+=================================================================================================================================
+[Unit]
+Description=Process Monitoring and Control Daemon
+After=rc-local.service
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/supervisord
+SysVStartPriority=99
+
+[Install]
+WantedBy=multi-user.target
+Alias=supervisord.service
+=================================================================================================================================

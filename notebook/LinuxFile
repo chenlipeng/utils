@@ -1,0 +1,14 @@
+#客户端异常关闭,或网络断开 server收不到ACK,在一定时间后重发keepalive packet
+/proc/sys/net/ipv4/tcp_keepalive_intvl
+#临时修改以上值
+sysctl -w net.ipv4.tcp_keepalive_intvl=20
+#全局设置
+/etc/sysctl.conf
+
+#重发次数
+/proc/sys/net/ipv4/tcp_keepalive_probes
+
+TCP_KEEPCNT 	覆盖 tcp_keepalive_probes，默认9（次）
+TCP_KEEPIDLE 	覆盖 tcp_keepalive_time，默认7200（秒）
+TCP_KEEPINTVL 	覆盖 tcp_keepalive_intvl，默认75（秒）
+

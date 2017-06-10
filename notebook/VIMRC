@@ -5,7 +5,9 @@ set bg=dark
 set nu
 
 "设置自动缩排
-set autoindent
+"set autoindent
 
 "设置Tab键的缩进值tabStop
 set ts=4
+
+set tags+=/home/autumn/github/redis/tags
