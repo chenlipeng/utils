@@ -1,0 +1,20 @@
+[root@xdian ~]# /etc/init.d/confluence start
+
+To run Confluence in the foreground, start the server with start-confluence.sh -fg
+executing using dedicated user: confluence
+If you encounter issues starting up Confluence, please see the Installation guide at http://confluence.atlassian.com/display/DOC/Confluence+Installation+Guide
+
+Server startup logs are located in /usr/local/confluence/logs/catalina.out
+---------------------------------------------------------------------------
+Using Java: /usr/local/confluence/jre//bin/java
+2017-10-17 00:18:51,988 INFO [main] [atlassian.confluence.bootstrap.SynchronyProxyWatchdog] A Context element for ${confluence.context.path}/synchrony-proxy is found in /usr/local/confluence/conf/server.xml. No further action is required
+---------------------------------------------------------------------------
+Using CATALINA_BASE:   /usr/local/confluence
+Using CATALINA_HOME:   /usr/local/confluence
+Using CATALINA_TMPDIR: /usr/local/confluence/temp
+Using JRE_HOME:        /usr/local/confluence/jre/
+Using CLASSPATH:       /usr/local/confluence/bin/bootstrap.jar:/usr/local/confluence/bin/tomcat-juli.jar
+Using CATALINA_PID:    /usr/local/confluence/work/catalina.pid
+Existing PID file found during start.
+Removing/clearing stale PID file.
+Tomcat started.

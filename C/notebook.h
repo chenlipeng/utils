@@ -1,3 +1,4 @@
+void printSysConf();
 size_t zmalloc_get_memory_size(void);
 void get_sys_info();
 void threadTest();
